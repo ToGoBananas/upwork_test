@@ -1,14 +1,50 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <script src="https://rawgit.com/enyo/dropzone/master/dist/dropzone.js"></script>
-    <link rel="stylesheet" href="https://rawgit.com/enyo/dropzone/master/dist/dropzone.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="{% static 'js/dropzone.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/dropzone.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <title>Upwork test</title>
 </head>
 <body>
-<form action="/file-upload"
-      class="dropzone"
-      id="my-awesome-dropzone"></form>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Upwork test</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="">Home</a></li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </nav>
+    <div class="container" id="content">
+        <div class="row">
+            <div class="col-md-12 col-lg-6">
+                <form action="{% url 'app:sample1' %}" class="dropzone" id="sample1">
+                    <div class="dz-message" data-dz-message><span>Drop sample1 here</span></div>
+                    {% csrf_token %}
+                </form>
+            </div>
+            <div class="col-md-12 col-lg-6">
+                <form action="{% url 'app:sample1' %}" class="dropzone" id="sample2">
+                    <div class="dz-message" data-dz-message><span>Drop sample2 here</span></div>
+                    {% csrf_token %}
+                </form>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
