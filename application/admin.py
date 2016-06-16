@@ -1,3 +1,12 @@
 from django.contrib import admin
+from .models import SampleA, SampleB
 
-# Register your models here.
+
+@admin.register(SampleA)
+class Sample1Admin(admin.ModelAdmin):
+    list_display = ('created', )
+
+
+@admin.register(SampleB)
+class Sample2Admin(admin.ModelAdmin):
+    list_display = ('created', )

@@ -32,14 +32,14 @@
     <div class="container" id="content">
         <div class="row">
             <div class="col-md-12 col-lg-6">
-                <form action="{% url 'app:sample1' %}" class="dropzone" id="sample1">
-                    <div class="dz-message" data-dz-message><span>Drop sample1 here</span></div>
+                <form action="{% url 'app:sample-a' %}" class="dropzone" id="sampleA">
+                    <div class="dz-message" data-dz-message><span>Drop SampleA here</span></div>
                     {% csrf_token %}
                 </form>
             </div>
             <div class="col-md-12 col-lg-6">
-                <form action="{% url 'app:sample1' %}" class="dropzone" id="sample2">
-                    <div class="dz-message" data-dz-message><span>Drop sample2 here</span></div>
+                <form action="{% url 'app:sample-b' %}" class="dropzone" id="sampleB">
+                    <div class="dz-message" data-dz-message><span>Drop SampleB here</span></div>
                     {% csrf_token %}
                 </form>
             </div>
