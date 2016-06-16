@@ -16,7 +16,7 @@
 3. `$ virtualenv venv --python=python2.7`
 4. `$ source venv/bin/activate`
 5. `$ pip install -r requirements.txt`
-6. Log into psql console and create database and `$ create database upwork_test with owner postgres`
+6. Log into psql console and create database with `$ create database upwork_test with owner postgres`
 7. In directory with manage.py and activated envirnoment `$ python manage.py migrate`
 8. create superuser `$ python manage.py createsuperuser`
 9. `$ python manage.py runserver`
